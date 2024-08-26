@@ -14,10 +14,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit from spm8667p1_64 device
 $(call inherit-product, device/alps/spm8667p1_64/device.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := spm8667p1_64
 PRODUCT_NAME := twrp_spm8667p1_64
