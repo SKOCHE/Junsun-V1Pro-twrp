@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/alps/spm8667p1_64
+DEVICE_PATH := device/spm8667p1_64
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
