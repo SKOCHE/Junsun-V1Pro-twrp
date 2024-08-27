@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/alps/spm8667p1_64
+LOCAL_PATH := device/spm8667p1_64
 # Product characteristics
 #PRODUCT_CHARACTERISTICS := default
 # Treble
