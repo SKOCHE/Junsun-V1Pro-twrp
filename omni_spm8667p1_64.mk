@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from spm8667p1_64 device
-$(call inherit-product, device/alps/spm8667p1_64/device.mk)
+$(call inherit-product, device/spm8667p1_64/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := spm8667p1_64
