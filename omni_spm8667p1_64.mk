@@ -16,7 +16,7 @@ $(call inherit-product, device/spm8667p1_64/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := spm8667p1_64
-PRODUCT_NAME := twrp_spm8667p1_64
+PRODUCT_NAME := omni_spm8667p1_64
 PRODUCT_BRAND := alps
 PRODUCT_MODEL := spm8667p1_64
 PRODUCT_MANUFACTURER := alps
