@@ -36,12 +36,3 @@ PRODUCT_BRAND := alps
 PRODUCT_MODEL := spm8667p1_64
 PRODUCT_MANUFACTURER := alps
 
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-#    TARGET_DEVICE=spm8667p1_64 \
-#    PRODUCT_NAME=vnd_spm8667p1_64 \
-#    PRIVATE_BUILD_DESC="vnd_spm8667p1_64-userdebug 10 QP1A.190711.020 p5spm8666p164P2 test-keys"
-
-#BUILD_FINGERPRINT := alps/vnd_spm8667p1_64/spm8667p1_64:10/QP1A.190711.020/p5spm8666p164P2:userdebug/test-keys
-#alps/full_evb3561sv_w_65_m0/evb3561sv_w_65_m0:6.0/MRA58K/1564481527:userdebug/test-keys
-
-#PRODUCT_GMS_CLIENTID_BASE := android-wheatek
