@@ -215,7 +215,7 @@ TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness
 TW_DEVICE_VERSION := 12.B-Junsun V1Pro 
 
 # display
-DEVICE_RESOLUTION := 1920x720
+DEVICE_RESOLUTION := 1280x720
 TW_THEME := landscape_hdpi
 TW_ROTATION := 90
 BOARD_USE_ROTATION_90 := true
