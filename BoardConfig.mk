@@ -211,24 +211,21 @@ TW_EXTRA_LANGUAGES := false
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
-TW_NO_SCREEN_BLANK := true
-#TW_SCREEN_BLANK_ON_BOOT := true
 
-# Display
+TW_DEVICE_VERSION := 12.B-Junsun V1Pro 
+
+# display
+DEVICE_RESOLUTION := 1920x720
+TW_THEME := landscape_hdpi
+TW_ROTATION := 90
+BOARD_USE_ROTATION_90 := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+TW_NO_SCREEN_TIMEOUT := true
+TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 150
-
-#TW_DEFAULT_DEVICE_NAME := spm8667p1_64
-TW_DEVICE_VERSION := 12.B-Junsun V1Pro 
-
-# Resolution
-TW_IGNORE_MAJOR_AXIS_0 := true
-TW_THEME := landscape_hdpi
-#TW_ROTATION := 90 (90)(180)(360)
-RECOVERY_TOUCHSCREEN_SWAP_XY := true
-RECOVERY_TOUCHSCREEN_FLIP_X := true
-#BOARD_HAS_FLIPPED_SCREEN := true
 
 # Screen density
 TARGET_SCREEN_DENSITY := 240
@@ -259,14 +256,9 @@ TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_BASH := true
-#TW_EXCLUDE_LPTOOLS := true
-#TW_EXCLUDE_LPDUMP := true
+
 
 # Tools
-#TW_INCLUDE_PYTHON := true
-#TW_INCLUDE_NANO := true
-#TW_INCLUDE_TZDATA := true
-#TW_INCLUDE_BASH := true
 TW_INCLUDE_LPTOOLS := true
 TW_INCLUDE_LPDUMP := true
 TW_INCLUDE_RESETPROP := true
