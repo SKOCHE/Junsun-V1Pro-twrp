@@ -16,8 +16,3 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/twrp_spm8667p1_64.mk
-
-COMMON_LUNCH_CHOICES := \
-    twrp_spm8667p1_64-userdebug \
-    twrp_spm8667p1_64-user \
-    twrp_spm8667p1_64-eng
