@@ -46,11 +46,9 @@ TARGET_USES_UEFI := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
-#TARGET_BOARD_PLATFORM_GPU := Mali-G52 MC2
 
 #BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
-#MTK_HARDWARE := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := spm8667p1_64
@@ -109,7 +107,6 @@ BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
-#BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset "0x00e88000"
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -142,14 +139,7 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
-# Stock
-#VENDOR_SECURITY_PATCH := 2021-06-05
-#PLATFORM_VERSION := 10
-
 # Charger
-#BOARD_CHARGER_ENABLE_SUSPEND := true
-#TARGET_DISABLE_TRIPLE_BUFFERING := false
-#BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TW_USE_LEGACY_BATTERY_SERVICES := true
 
 # Metadata
@@ -158,31 +148,15 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Crypto
 TW_INCLUDE_CRYPTO := false
-#TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
-#TW_USE_FSCRYPT_POLICY := 1
-
-#TW_CRYPTO_FS_TYPE := "ext4"
-#TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
-#TW_CRYPTO_MNT_POINT := "/data"
-#TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-#TW_CRYPTO_KEY_LOC := "footer"
 
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     ashmemd_aidl_interface-cpp \
     libashmemd_client
 
-#    libkeymaster4 \
-#    libpuresoftkeymasterdevice
-
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
-
-#    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-#    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
@@ -194,16 +168,12 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_SELECT_BUTTON := false
 
-# Partitions (listed in the file) to be wiped under recovery.
-#TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
-
 # TWRP specific build flags
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TARGET_USES_MKE2FS := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-#TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # TWRP Configuration
 TW_DEFAULT_LANGUAGE := ru
@@ -222,6 +192,7 @@ BOARD_USE_ROTATION_90 := true
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
 TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_BLANK := true
 #TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_DEFAULT_BRIGHTNESS := 1200
@@ -234,9 +205,6 @@ TARGET_SCREEN_DENSITY := 240
 TWRP_EVENT_LOGGING := true
 
 # Storage
-#TW_NO_USB_STORAGE := false
-#TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_HAS_MTP := true
